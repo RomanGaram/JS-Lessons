@@ -3,7 +3,7 @@ let secondnumber
 
 firstnumber = prompt("Please enter first number");
 secondnumber = prompt("Please enter second number");
-alert (String("adding=") + ((Number(firstnumber) + Number(secondnumber))));
+alert (String("adding=") + (Number(firstnumber) + Number(secondnumber)));
 
 alert (String("Subtraction=") + (Number(firstnumber) - Number(secondnumber)));
  
