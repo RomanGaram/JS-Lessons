@@ -1,16 +1,31 @@
-let firstnumber
+let firstNumber
+let secondNumber
+let answer
 
-const SECOND_NUMBER = 0
+firstNumber = +prompt("Please enter first number", '');
+secondNumber = +prompt("Please enter second number", '');
 
-firstnumber = prompt("Please enter first number");
-let secondnumber = prompt("Please enter second number");
-if ()
+if ((firstNumber === '') || (secondNumber === '')) { 
+    alert ('ERROR');   
+} 
+else {
 
+        alert (String("adding=") + (Number(firstNumber) + Number(secondNumber)));
 
-alert (String("adding=") + (Number(firstnumber) + Number(secondnumber)));
+    if (firstNumber >= secondNumber) {
+        alert (String("Subtraction=") + (Number(firstNumber) - Number(secondNumber)));
+    } else (firstNumber < secondNumber) {
+        confirm ('Are you sure you want to proceed with the operation?');
+        alert (String("Subtraction=") + (Number(firstNumber) - Number(secondNumber)));
+    }
 
-alert ("Subtraction=" + (Number(firstnumber) - Number(secondnumber)));
- 
-alert 'Division' = (Number(firstnumber) / Number(secondnumber));
+    if (secondNumber == 0) {
+        alert (String('You cannot divide by ZERO!'));
+    }
+    else if (secondNumber > 0) {
+        alert (String('Division=') + (Number(firstNumber) / Number(secondNumber)));
+    }
 
-alert (String("Multiplication=") + Number(firstnumber) * Number(secondnumber));
+        alert (String("Multiplication=") + (Number(firstNumber) * Number(secondNumber)));
+
+}
