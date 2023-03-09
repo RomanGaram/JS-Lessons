@@ -1,27 +1,32 @@
-firstNumber = +prompt("Please enter first number", '');
-secondNumber = +prompt("Please enter second number", '');
+let firstNumber = +prompt("Please enter first number");
+let secondNumber = +prompt("Please enter second number");
+let ask;
+console.log(firstNumber, typeof(firstNumber));  
+console.log(secondNumber, typeof(secondNumber));
 
-if ((firstNumber == '') || (secondNumber === '')) { 
-    alert ('ERROR');   
-} 
+if ((firstNumber == '') || (secondNumber ==  '') || (firstNumber == null) || (secondNumber == null)) { 
+    alert ('ERROR');  
+}
 else {
 
-        alert (String("adding=") + (Number(firstNumber) + Number(secondNumber)));
+    alert (("Adding=") + ((firstNumber) + (secondNumber)));
 
 
     if (firstNumber < secondNumber) {
-       confirm ('Are you sure you want to proceed with the operation?');
-    } if (true) {
-        alert (String("Subtraction=") + (Number(firstNumber) - Number(secondNumber)));
+       ask = confirm ('Are you sure you want to proceed with the operation?');
+    } if (ask == true || ask == undefined) {
+        alert (("Subtraction=") + ((firstNumber) - (secondNumber)));
     }
+    else if (ask == false){}
 
+    console.log(ask, typeof(ask));
+    
     if (secondNumber === 0) {
-        alert (String('You cannot divide by ZERO!'));
+        alert (('You cannot divide by ZERO!'));
     }
     else if (secondNumber > 0) {
-        alert (String('Division=') + (Number(firstNumber) / Number(secondNumber)));
+        alert (('Division=') + ((firstNumber) / (secondNumber)));
     }
 
-        alert (String("Multiplication=") + (Number(firstNumber) * Number(secondNumber)));
-
+        alert (("Multiplication=") + ((firstNumber) * (secondNumber)));
 }
